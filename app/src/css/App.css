@@ -1,0 +1,55 @@
+.App {
+  /* text-align: center; */
+}
+.ButtonPanel {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.DetailButton {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.CloseButton {
+  float:right;
+}
+
+.SlideshowButton {
+  height: 30px;
+  margin: 20px;
+  z-index: 1;
+}
+
+.SlideshowButton:active {
+  color: red;
+}
+
+.Selected {
+  background-color: turquoise;
+}
+
+
+.mapContainer {
+  /* position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0; */
+  width: 200px;
+  height: 200px;
+}
+
+.sidebarStyle {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  background-color: #404040;
+  color: #ffffff;
+  z-index: 1 !important;
+  padding: 6px;
+  font-weight: bold;
+}
