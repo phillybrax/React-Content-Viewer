@@ -13,6 +13,14 @@ const detailStyle = {
 };
 
 class DetailView extends React.Component {
+  componentDidMount() {
+    console.log("did mount");
+  }
+
+  componentWillUnmount() {
+    console.log("will unmount");
+  }
+
   render() {
     if (!this.props.detail) {
       return null;
@@ -21,21 +29,30 @@ class DetailView extends React.Component {
     return (
       // Wrapping in a transition ensures that component is only mounted when visible
       <Transition
-        timeout={1000}
+        timeout={2000}
         mountOnEnter
         unmountOnExit
         in={show}
         addEndListener={(node, done) => {
-          gsap.to(node, 0.5, {
-            y: show ? 0 : 100,
-            autoAlpha: show ? 1 : 0,
-            onComplete: done,
-          });
+          console.log("end listener");
+          gsap.fromTo(
+            node,
+            {
+              y: show ? 0 : 0,
+              autoAlpha: show ? 0 : 1,
+            },
+            {
+              y: show ? 0 : 100,
+              autoAlpha: show ? 1 : 0,
+              onComplete: done,
+              duration: 2,
+            }
+          );
         }}
       >
         <div style={detailStyle}>
-          <Carousel images={this.props.detail.images} />
           <div>{`${this.props.detail.firstName} ${this.props.detail.lastName}`}</div>
+          <Carousel images={this.props.detail.images} />
         </div>
       </Transition>
     );

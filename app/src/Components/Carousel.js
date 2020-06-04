@@ -9,6 +9,7 @@ const carouselStyle = {
   width: "100%",
   height: "50%",
   opacity: "1",
+  marginTop: "30px",
 };
 
 const imgContainerStyle = {
@@ -24,6 +25,9 @@ class Carousel extends React.Component {
     super(props);
     this.state = { index: 0 };
   }
+
+  
+
   // Single method for going forwards or backwards in carousel
   showAdjacent = (forwards) => {
     const index = this.state.index;
