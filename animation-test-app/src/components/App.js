@@ -1,5 +1,6 @@
 import React from "react";
 import MultiViewNumberContainer from "./MultiviewNumberContainer";
+import SingleViewNumberContainer from "./SingleViewNumberContainer";
 const AppStyle = {
   textAlign: "center",
   display: "flex",
@@ -42,12 +43,16 @@ class App extends React.Component {
     this.setState({ index: newIndex });
   };
   render() {
+    // Three possible approaches to displayed 3 different ways to show
+    // a few possibilities for updating its appearance
     return (
       <div style={AppStyle}>
         <div style={containerStyle}>
           <button onClick={this.decrement}>-</button>
-          {/* <p>{this.state.index}</p> */}
+          <p>{this.state.index}</p>
+          <SingleViewNumberContainer index={this.state.index} />
           <MultiViewNumberContainer index={this.state.index} indices={this.indices} />
+         
           <button onClick={this.increment}>+</button>
         </div>
       </div>

@@ -1,1 +1,2 @@
 # React-Content-Viewer
+There are two separate demo apps, created using React and gsap for animations. The main one is in the "app" folder, which is a simple content viewer showing some info about American artists. The other in the "animation-test-app" is a simple example showing a couple of simple animation strategies for React + gsap. 

@@ -1,6 +1,5 @@
 import React from "react";
 import { gsap } from "gsap";
-import { Transition } from "react-transition-group";
 
 const carouselStyle = {
   display: "flex",
@@ -25,8 +24,6 @@ class Carousel extends React.Component {
     super(props);
     this.state = { index: 0 };
   }
-
-  
 
   // Single method for going forwards or backwards in carousel
   showAdjacent = (forwards) => {
